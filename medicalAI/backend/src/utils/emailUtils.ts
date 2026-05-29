@@ -7,8 +7,8 @@ const JWT_EXPIRY = '7d';
 
 // Email configuration (Brevo API)
 const BREVO_API_KEY = process.env.BREVO_API_KEY || '';
-const SENDER_EMAIL = 'ininsico@gmail.com';
-const SENDER_NAME = 'Arslan Rathore';
+const SENDER_EMAIL = 'nomanshaekr2@gmial.com';
+const SENDER_NAME = 'NOMAN SHAKIR';
 
 /**
  * Generates a JSON Web Token (JWT) for a user.
