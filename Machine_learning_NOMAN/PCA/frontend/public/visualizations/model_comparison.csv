@@ -1,0 +1,7 @@
+Track,Model,Accuracy,Precision,Recall,F1 Score
+Raw 13 features,RandomForest,0.8619,0.8634,0.8619,0.8613
+PCA (7 dims),Logistic Regression,0.8453,0.8453,0.8453,0.8452
+PCA (7 dims),KNN,0.8453,0.8462,0.8453,0.8448
+PCA (7 dims),Random Forest,0.8398,0.8403,0.8398,0.8394
+PCA (7 dims),SVM,0.8398,0.8403,0.8398,0.8394
+PCA (7 dims),Decision Tree,0.8232,0.8239,0.8232,0.8226
