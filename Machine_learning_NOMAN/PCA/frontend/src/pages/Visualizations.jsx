@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import ImageModal from '../components/ImageModal';
+
 const VIZ_LIST = [
   { src: '/visualizations/target_distribution.png', title: 'Target Distribution', desc: 'Class balance between heart disease (1) and no disease (0)' },
   { src: '/visualizations/feature_distributions.png', title: 'Feature Distributions', desc: 'Histograms of Age, BP, Cholesterol, MaxHR, Oldpeak' },
@@ -10,6 +13,8 @@ const VIZ_LIST = [
 ];
 
 export default function Visualizations() {
+  const [modalSrc, setModalSrc] = useState(null);
+
   return (
     <div className="card">
       <div className="card-header">
@@ -19,7 +24,7 @@ export default function Visualizations() {
       <div className="card-body">
         <div className="viz-gallery">
           {VIZ_LIST.map((v, i) => (
-            <div key={i} className="viz-item" onClick={() => window.open(v.src, '_blank')}>
+            <div key={i} className="viz-item" onClick={() => setModalSrc(v.src)}>
               <h4>{v.title}</h4>
               <p className="viz-desc">{v.desc}</p>
               <img src={v.src} alt={v.title} />
@@ -27,6 +32,7 @@ export default function Visualizations() {
           ))}
         </div>
       </div>
+      <ImageModal src={modalSrc} onClose={() => setModalSrc(null)} />
     </div>
   );
 }
