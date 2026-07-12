@@ -1,0 +1,8 @@
+{
+  "model_name": "Raw 13 features / RandomForest",
+  "accuracy": 0.8619,
+  "precision": 0.8634,
+  "recall": 0.8619,
+  "f1_score": 0.8613,
+  "pca_used": false
+}
