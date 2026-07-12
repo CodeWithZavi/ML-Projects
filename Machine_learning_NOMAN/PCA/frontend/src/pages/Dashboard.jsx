@@ -1,4 +1,7 @@
 export default function Dashboard({ modelInfo, history }) {
+  const recent = history.slice(0, 20).reverse();
+  const riskCount = history.filter(h => h.result === 1).length;
+
   const stats = [
     { label: 'Active Model', value: modelInfo?.model_name?.split('/')[0]?.trim() || '--', icon: 'fa-microchip', color: 'stat-blue' },
     { label: 'Accuracy', value: modelInfo?.accuracy ? `${(modelInfo.accuracy * 100).toFixed(1)}%` : '--', icon: 'fa-chart-line', color: 'stat-green' },
@@ -20,7 +23,17 @@ export default function Dashboard({ modelInfo, history }) {
         ))}
       </div>
 
-      {modelInfo && (
+      {!modelInfo ? (
+        <div className="card mt-4">
+          <div className="card-header"><h3><i className="fas fa-info-circle"></i> Model Details</h3></div>
+          <div className="card-body">
+            <div className="skeleton skeleton-text short"></div>
+            <div className="skeleton skeleton-text"></div>
+            <div className="skeleton skeleton-text"></div>
+            <div className="skeleton skeleton-text"></div>
+          </div>
+        </div>
+      ) : (
         <div className="card mt-4">
           <div className="card-header">
             <h3><i className="fas fa-info-circle"></i> Deployed Model Details</h3>
@@ -35,6 +48,27 @@ export default function Dashboard({ modelInfo, history }) {
                 <tr><td>F1-Score</td><td>{(modelInfo.f1_score * 100).toFixed(2)}%</td></tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      )}
+
+      {recent.length > 0 && (
+        <div className="card mt-4">
+          <div className="card-header">
+            <h3><i className="fas fa-wave-square"></i> Recent Risk Trend</h3>
+            <p>{riskCount} of {history.length} recent assessments flagged as high risk</p>
+          </div>
+          <div className="card-body">
+            <div className="trend-chart">
+              {recent.map((h, i) => (
+                <div
+                  key={h.id}
+                  className={`trend-bar ${h.result === 1 ? 'negative' : 'positive'}`}
+                  style={{ height: `${h.result === 1 ? 40 + Math.random() * 8 : 8 + Math.random() * 12}px` }}
+                  title={`${h.timestamp}: ${h.result === 1 ? 'High Risk' : 'Low Risk'}`}
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
       )}
