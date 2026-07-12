@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.env
+.venv
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ML / Data
+*.joblib
+*.pkl
+*.h5
+*.pt
+*.pth
+*.onnx
+mlruns/
+lightning_logs/
+wandb/
+checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Docker
+.docker/
