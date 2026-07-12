@@ -12,6 +12,7 @@ import './App.css';
 export default function App() {
   const [activePage, setActivePage] = useState('dashboard');
   const [modelInfo, setModelInfo] = useState(null);
+  const [dark, setDark] = useState(() => localStorage.getItem('cardioTheme') === 'dark');
   const [history, setHistory] = useState(() => {
     const saved = localStorage.getItem('predictHistory');
     return saved ? JSON.parse(saved) : [];
@@ -20,6 +21,11 @@ export default function App() {
   useEffect(() => {
     fetchModelInfo().then(setModelInfo).catch(() => setModelInfo(null));
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    localStorage.setItem('cardioTheme', dark ? 'dark' : 'light');
+  }, [dark]);
 
   useEffect(() => {
     localStorage.setItem('predictHistory', JSON.stringify(history));
@@ -37,7 +43,7 @@ export default function App() {
     <div className="app-container">
       <Sidebar activePage={activePage} onNavigate={setActivePage} modelInfo={modelInfo} />
       <main className="main-content">
-        <Header title={pages[activePage]} />
+        <Header title={pages[activePage]} dark={dark} onToggleTheme={() => setDark(d => !d)} />
         <div className="page-content">
           {activePage === 'dashboard' && <Dashboard modelInfo={modelInfo} history={history} />}
           {activePage === 'assessment' && <Assessment onResult={addHistory} modelInfo={modelInfo} />}
