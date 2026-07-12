@@ -1,0 +1,538 @@
+sBelow is the guide with all PPT, presentation, and submission-related content removed. This contains only the coding, machine learning project, dashboard, and report requirements.
+
+Machine Learning Project Requirements
+
+Project Objective
+
+Develop a complete end-to-end Machine Learning project that demonstrates the full ML pipeline from data preprocessing to prediction and visualization.
+
+Your project should include:
+
+Data preprocessing
+
+Feature engineering (if required)
+
+Training multiple machine learning models
+
+Model evaluation
+
+Best model selection
+
+Working prediction system
+
+User Interface (UI) or Dashboard
+
+Complete documentation of the ML workflow
+
+Required Project Components
+
+1. Research Report
+
+Include the following sections:
+
+Title & Authors
+
+Project title
+
+Group members
+
+Course
+
+Semester
+
+Submission date
+
+Abstract
+
+Include:
+
+Problem overview
+
+Dataset summary
+
+ML models used
+
+Evaluation metrics
+
+Best model
+
+Introduction
+
+Explain:
+
+Background of the problem
+
+Importance of solving it
+
+Real-world applications
+
+Problem Statement
+
+Clearly define:
+
+What problem is being solved
+
+Prediction or classification objective
+
+Project goals
+
+Dataset Description
+
+Describe:
+
+Dataset source
+
+Number of rows
+
+Number of columns
+
+Input features
+
+Target variable
+
+Meaning of important features
+
+Data Preprocessing
+
+Explain every preprocessing step, including:
+
+Missing value handling
+
+Duplicate removal
+
+Outlier detection/removal
+
+Encoding categorical variables
+
+Feature scaling
+
+Feature selection
+
+PCA (if used)
+
+Train/Test split
+
+Machine Learning Models
+
+Train at least three ML algorithms.
+
+For each model explain:
+
+Why it was selected
+
+How it works
+
+Advantages
+
+Limitations
+
+Example models:
+
+Logistic Regression
+
+Decision Tree
+
+Random Forest
+
+Support Vector Machine (SVM)
+
+K-Nearest Neighbors (KNN)
+
+Naive Bayes
+
+XGBoost
+
+Model Evaluation
+
+Evaluate models using:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+ROC-AUC (optional)
+
+Explain why the selected model performed better.
+
+Results & Discussion
+
+Include:
+
+Model comparison
+
+Best model
+
+Performance analysis
+
+Error analysis
+
+Confusion Matrix explanation
+
+Conclusion
+
+Discuss:
+
+Final results
+
+Project limitations
+
+Future improvements
+
+References
+
+Include:
+
+Dataset source
+
+Research papers
+
+Documentation
+
+Libraries used
+
+Required Coding Components
+
+Your code should include:
+
+Data Loading
+
+Load dataset
+
+Display dataset information
+
+Check data types
+
+View summary statistics
+
+Exploratory Data Analysis (EDA)
+
+Perform:
+
+Target distribution
+
+Feature distributions
+
+Correlation analysis
+
+Missing values analysis
+
+Outlier analysis
+
+Data Preprocessing
+
+Implement:
+
+Missing value handling
+
+Encoding
+
+Scaling
+
+Feature engineering (if required)
+
+Train/Test Split
+
+Model Training
+
+Train multiple ML models.
+
+Example:
+
+Decision Tree
+
+Random Forest
+
+SVM
+
+Logistic Regression
+
+KNN
+
+
+Hyperparameter Tuning
+
+Use techniques like:
+
+GridSearchCV
+
+RandomizedSearchCV
+
+Model Evaluation
+
+Calculate:
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+Confusion Matrix
+
+Classification Report
+
+Best Model Selection
+
+Compare all trained models and select the best-performing model based on evaluation metrics.
+
+Model Saving
+
+Save the trained model using:
+
+Pickle
+
+Joblib
+
+Prediction System
+
+The application should:
+
+Accept user input
+
+Preprocess input
+
+Load trained model
+
+Predict output
+
+Display prediction clearly
+
+Required Visualizations
+
+Include the following graphs.
+
+1. Target/Class Distribution
+
+Bar Chart
+
+Pie Chart
+
+Purpose:
+
+Show class balance.
+
+2. Feature Distribution
+
+Examples:
+
+Histogram
+
+Box Plot
+
+Bar Chart
+
+Purpose:
+
+Understand feature distributions.
+
+3. Correlation Analysis
+
+Examples:
+
+Heatmap
+
+Scatter Plot
+
+Purpose:
+
+Show relationships among features.
+
+4. Model Accuracy Comparison
+
+Create a bar chart comparing all ML models.
+
+Example:
+
+ModelAccuracy
+
+Decision Tree
+
+78%
+
+Random Forest
+
+86%
+
+SVM
+
+82%
+
+Logistic Regression
+
+80%
+
+KNN
+
+76%
+
+5. Precision, Recall & F1-score Comparison
+
+Display grouped bar charts comparing:
+
+Precision
+
+Recall
+
+F1-score
+
+6. Confusion Matrix
+
+Generate a confusion matrix for the best-performing model.
+
+Explain:
+
+True Positives
+
+True Negatives
+
+False Positives
+
+False Negatives
+
+Model Comparison Table
+
+ModelAccuracyPrecisionRecallF1-score
+
+Decision Tree
+
+
+
+
+
+
+
+
+
+Random Forest
+
+
+
+
+
+
+
+
+
+Logistic Regression
+
+
+
+
+
+
+
+
+
+SVM
+
+
+
+
+
+
+
+
+
+KNN
+
+
+
+
+
+
+
+
+
+Also explain:
+
+Which model achieved the highest accuracy?
+
+Which model had the best F1-score?
+
+Why was the final model selected?
+
+Dashboard / UI Requirements
+
+The project should include a working interface that displays:
+
+Input Section
+
+User inputs feature values
+
+Prediction Section
+
+Predicted result
+
+Confidence score (optional)
+
+Model Information
+
+Selected model
+
+Accuracy
+
+Precision
+
+Recall
+
+F1-score
+
+Graphs
+
+Include at least one useful visualization such as:
+
+Target distribution
+
+Accuracy comparison
+
+Confusion Matrix
+
+Correlation Heatmap
+
+Code Quality Requirements
+
+Well-structured project folders
+
+Modular Python code
+
+Proper comments
+
+Meaningful variable names
+
+Reusable functions/classes
+
+Error handling where appropriate
+
+Minimum Project Standard
+
+Your project should include:
+
+End-to-end ML pipeline
+
+Clean preprocessing pipeline
+
+At least 3 trained ML models
+
+Hyperparameter tuning
+
+Model comparison table
+
+Evaluation metrics
+
+Required visualizations
+
+Working prediction system
+
+Saved trained model
+
+Functional UI/Dashboard
+
+Well-documented code
+
+Complete research-style report
